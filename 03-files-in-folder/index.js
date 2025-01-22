@@ -28,9 +28,10 @@ async function processFolder(folderPath) {
           info: fileInfo,
           size: fileSizeKB,
         });
-      } else if (entry.isDirectory()) {
-        await processFolder(entryPath);
       }
+      // else if (entry.isDirectory()) {
+      //   await processFolder(entryPath);
+      // }
     }
   } catch (error) {
     console.error('Error reading the folder:', error);
